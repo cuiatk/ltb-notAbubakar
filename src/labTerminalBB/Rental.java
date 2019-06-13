@@ -13,6 +13,17 @@ public class Rental {
 	public Movie getMovie() {
 		return _movie;
 	}
+	
+	/**
+     * Calculates price for every movie rented with respect to its type & number of days rented.
+     * 
+     * @param nothing.
+     * 
+     * @return int
+     * 				calculated amount.
+     * 	          
+     */
+	
 	double calculateAmount() {
 		double currentAmount = 0;
 		switch (getMovie().getPriceCode()) {
