@@ -35,6 +35,17 @@ public class Customer {
 		 * TODO 3		10 Marks
 		 * Provide suitable specification for statement method 
 		 */
+		
+		/**
+	     * Prints the overall bill generated.
+	     * 
+	     * @param nothing.
+	     * 
+	     * @return String
+	     * 				all information about customer purchasing.
+	     * 	          
+	     */
+		
 		public String statement() {
 		double totalAmount = 0;
 		
