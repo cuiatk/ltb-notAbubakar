@@ -26,6 +26,19 @@ public class CustomerTest {
 			assert true;
 		}
 	}
+	
+	@Test
+	public void checkName() {
+		String name = me.getName();
+		assert name.equals("Nadir");
+	}
+	
+	@Test
+	public void checkFrequentRenterPoints() {
+		int renterPoints = me.frequentRenterPointss();
+		assert renterPoints==4;
+	}
+	
 	/*
 	 * TODO 2			10 Marks
 	 * Provide at least two more test cases carefully chosen so that they satisfy our testing

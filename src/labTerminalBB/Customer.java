@@ -5,6 +5,7 @@ import java.util.Vector;
 
 public class Customer {
 		private String _name;
+		private int frequentRenterPoints = 0;
 		private Vector<Rental> _rentals = new Vector<Rental>();
 		public Customer (String name){
 			_name = name;
@@ -14,6 +15,10 @@ public class Customer {
 		}
 		public String getName (){
 			return _name;
+		};
+		
+		public int frequentRenterPointss (){
+			return frequentRenterPoints;
 		};
 		
 		/*
@@ -32,7 +37,7 @@ public class Customer {
 		 */
 		public String statement() {
 		double totalAmount = 0;
-		int frequentRenterPoints = 0;
+		
 		Enumeration<Rental> rentals = _rentals.elements();
 		String result = "Rental Record for " + getName() + "\n";
 		while (rentals.hasMoreElements()) {
