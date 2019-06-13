@@ -1,4 +1,4 @@
-package labTerminalB;
+package labTerminalBB;
 
 public class Rental {
 	private Movie _movie;

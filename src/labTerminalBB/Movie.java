@@ -1,4 +1,4 @@
-package labTerminalB;
+package labTerminalBB;
 
 public class Movie {
 	public static final int CHILDRENS = 2;

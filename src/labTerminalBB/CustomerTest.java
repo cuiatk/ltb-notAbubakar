@@ -1,4 +1,4 @@
-package labTerminalB;
+package labTerminalBB;
 
 import org.junit.Test;
 
