@@ -52,22 +52,22 @@ public class Customer {
 		Enumeration<Rental> rentals = _rentals.elements();
 		String result = "Rental Record for " + getName() + "\n";
 		while (rentals.hasMoreElements()) {
-			double thisAmount = 0;
+			double currentAmount = 0;
 			Rental each = (Rental) rentals.nextElement();
 			//determine amounts for each line
 			switch (each.getMovie().getPriceCode()) {
 			case Movie.REGULAR:
-				thisAmount += 2;
+				currentAmount += 2;
 				if (each.getDaysRented() > 2)
-					thisAmount += (each.getDaysRented() - 2) * 1.5;
+					currentAmount += (each.getDaysRented() - 2) * 1.5;
 				break;
 			case Movie.NEW_RELEASE:
-				thisAmount += each.getDaysRented() * 3;
+				currentAmount += each.getDaysRented() * 3;
 				break;
 			case Movie.CHILDRENS:
-				thisAmount += 1.5;
+				currentAmount += 1.5;
 				if (each.getDaysRented() > 3)
-					thisAmount += (each.getDaysRented() - 3) * 1.5;
+					currentAmount += (each.getDaysRented() - 3) * 1.5;
 				break;
 			}
 			// add frequent renter points
@@ -78,8 +78,8 @@ public class Customer {
 					each.getDaysRented() > 1) frequentRenterPoints ++;
 			//show figures for this rental
 			result += "\t" + each.getMovie().getTitle()+ "\t" +
-					String.valueOf(thisAmount) + "\n";
-			totalAmount += thisAmount;
+					String.valueOf(currentAmount) + "\n";
+			totalAmount += currentAmount;
 		}
 		//add footer lines
 		result += "Amount owed is " + String.valueOf(totalAmount) +
